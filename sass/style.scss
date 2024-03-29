@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+@import "./project_variables/style.scss";
+
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css";
+
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: $font;
+    color: $color-one;
+}
+header{
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 0 0;
+}
+header, section{
+    padding-bottom: 1.5rem;
+}
+main{
+    padding: 2rem 1rem;
+}
+h1, h2, footer h4{
+    letter-spacing: 4px;
+}
+h1, h2, h3{
+    color: $color-four !important;
+    text-align: center;
+}
+h1, h2, h3, h4{
+    text-transform: uppercase;
+    font-weight: 600 !important;
+
+}
+.section__characteristics_line{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    div.icon_content{
+        width: 50%;
+    }
+    div.characteristic{
+        display: flex;
+        gap: 1rem;
+        padding: 0 1rem;
+        width: 80%;
+
+        h4{
+            color: $color-four;
+        }
+        div.characteristic_content{
+            width: 75%;
+        }
+        div.icon_content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 18%;
+        }
+        div, div > p{
+            font-size: .7rem;
+            color: $color-four !important;
+        }
+    }
+}
+.section__ctas{
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+
+        button{
+            color: $color-white;
+            background-color: $color-two;
+        }
+        .whatsapp{
+            background-color: $color-five;
+        }
+    }
+}
+.product_infos{
+    div{
+        padding:1rem 0rem 3rem 0;
+    }
+}
+hr{
+    border: 2px solid $color-three;
+}
+.section__relationead_products{
+    h2, h4{
+        color: $color-four;
+    }
+    .message-body{
+        border-inline-start-color: $color-four !important;
+    }
+}
+footer{
+    background-color: $color-three;
+    padding: 1rem;
+
+    .footer__contato, .footer__contato a, .footer__end_line p{
+        color: $color-white;
+    }
+    h4{
+        font-size: 2rem;
+    }
+    .footer__end_line p{
+        font-size: 0.6rem;
+    }
+}
+footer, .footer__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+}
+@media screen and (min-width: 500px){
+    .section__characteristics_line{
+        flex-direction: row;
+        flex-wrap: wrap;
+       .characteristic{
+            max-width: 48%;
+       }
+    }
+    footer{
+        h4{
+            font-size: 1.5rem;
+        }
+        .footer__content{
+            flex-direction: row;
+        }
+        .footer__logo{
+            img{
+                max-width: 70%;
+            }
+            display: flex;
+            justify-content: end;
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    main, header{
+        padding: 2rem 3rem;
+    }
+    .section__ctas{
+        div{
+            flex-direction: row;
+            a{
+                width: 32%;
+                button{
+                    width: 100%;
+                }
+            }
+        }
+    }  
+}
+@media screen and (min-width: 1024px){
+    header{
+        justify-content: start;
+    }
+    .section__characteristics_line{
+        justify-content: space-between;
+        margin-left: -1vw;
+        .characteristic{
+            max-width: 23%;
+            .characteristic_content{
+                h4{
+                    font-size: 0.65rem !important;
+                }
+            }
+
+       }
+    }
+    .section__ctas{
+        h3{
+            text-align: start;
+        }
+        div{
+            width: 70%;
+        }
+    }
+    .section__product{
+        display: flex;
+        gap: 1.5rem;
+        h1{
+            text-align: start;
+        }
+        .product_info{
+            width: 50%;
+        }
+        .product_image{
+            display: flex;
+            align-items: center;
+            width:90%;
+        }
+    }
+    .section__relationead_products{
+        padding: 3rem 0 0 0;
+        h2{
+            text-align: start;
+        }
+        .relationead_products{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            .message{
+                width:49%
+            }
+        }
+    }
+    footer{
+        padding: 2rem 0 1rem 0;
+
+       .footer__contato ul{
+            display: flex;
+            flex-direction: column;
+            gap: .7rem;
+        }
+        .footer__content{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        } 
+        .footer__logo{
+            width: 50%;
+        }
+    }
+}
+@media screen and (min-width: 1440px){
+    .section__characteristics_line{
+        .characteristic{
+            .characteristic_content{
+                h4{
+                    font-size: 1rem !important;
+                }
+                p{
+                    font-size: 0.9rem !important;
+                }
+            }
+
+       }
+    }
+    .section__product{
+        gap: 2rem;
+        .product_image{
+            width: 65%;
+        }
+
+    }
+}
+
